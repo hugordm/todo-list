@@ -1,0 +1,117 @@
+/* Reset padrão para deixar a aparência consistente */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* Inclui padding e borda no cálculo de tamanho */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;  /* Centraliza horizontalmente */
+  align-items: center;      /* Centraliza verticalmente */
+  height: 100vh;            /* Altura total da tela */
+}
+
+.container {
+  background-color: #fff; /* Cor de fundo branca */
+  padding: 20px;          /* Espaço interno */
+  width: 400px;
+  max-width: 90%;
+  border-radius: 8px;     /* Bordas arredondadas */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  display: grid; 
+  grid-template-rows: auto auto 1fr; /* Define 3 linhas */
+  gap: 20px; /* Espaço entre elementos */
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+form {
+  display: flex;
+  gap: 10px; /* Espaço entre input e botão */
+}
+
+input[type="text"] {
+  flex: 1;  /* Ocupa todo o espaço disponível */
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #007bff;
+  outline: none; /* Remove a borda azul padrão */
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+ul {
+  list-style: none; /* Remove os marcadores da lista */
+  overflow-y: auto; /* Scroll se passar da altura */
+  max-height: 300px;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5px;
+  border-bottom: 1px solid #eee;
+}
+
+li.done span {
+  text-decoration: line-through;
+  color: #888;
+}
+
+li button {
+  background: none;
+  border: none;
+  color: #ff4d4d;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+li button:hover {
+  color: #cc0000;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 500px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  input[type="text"] {
+    font-size: 14px;
+  }
+}
