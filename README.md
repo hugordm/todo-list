@@ -1,6 +1,5 @@
 # Todo List
 
-![Captura de Tela](https://via.placeholder.com/600x400.png)
 
 ## 📌 Descrição
 
